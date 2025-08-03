@@ -53,7 +53,7 @@ build CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj: CXX_COMPILER__ClippingSo
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ClippingSoftware.dir\src\main.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
+  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
   OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
   OBJECT_FILE_DIR = CMakeFiles\ClippingSoftware.dir\src
 
@@ -65,10 +65,10 @@ build CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj: CXX_COMPILER__ClippingSo
 #############################################
 # Link the executable ClippingSoftware.exe
 
-build ClippingSoftware.exe: CXX_EXECUTABLE_LINKER__ClippingSoftware_Debug CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj | vendors/imgui/libimgui.a || vendors/imgui/libimgui.a
+build ClippingSoftware.exe: CXX_EXECUTABLE_LINKER__ClippingSoftware_Debug CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj | cmake/imgui/libimgui.a || cmake/imgui/libimgui.a
   CONFIG = Debug
   FLAGS = -g
-  LINK_LIBRARIES = vendors/imgui/libimgui.a  -ld3d11  -ldxgi  -ld3dcompiler  -ldwmapi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = cmake/imgui/libimgui.a  -ld3d11  -ldxgi  -ld3dcompiler  -ldwmapi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -114,61 +114,61 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_imgui: phony || .
 
-build vendors/imgui/CMakeFiles/imgui.dir/backends/imgui_impl_dx11.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/backends/imgui_impl_dx11.cpp || cmake_object_order_depends_target_imgui
+build cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/backends/imgui_impl_dx11.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/backends/imgui_impl_dx11.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Debug
-  DEP_FILE = vendors\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_dx11.cpp.obj.d
+  DEP_FILE = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\backends\imgui_impl_dx11.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
-  OBJECT_FILE_DIR = vendors\imgui\CMakeFiles\imgui.dir\backends
+  INCLUDES = -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\backends
 
-build vendors/imgui/CMakeFiles/imgui.dir/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_imgui
+build cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Debug
-  DEP_FILE = vendors\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_win32.cpp.obj.d
+  DEP_FILE = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\backends\imgui_impl_win32.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
-  OBJECT_FILE_DIR = vendors\imgui\CMakeFiles\imgui.dir\backends
+  INCLUDES = -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\backends
 
-build vendors/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui.cpp || cmake_object_order_depends_target_imgui
+build cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Debug
-  DEP_FILE = vendors\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj.d
+  DEP_FILE = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\imgui.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
-  OBJECT_FILE_DIR = vendors\imgui\CMakeFiles\imgui.dir
+  INCLUDES = -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui
 
-build vendors/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_demo.cpp || cmake_object_order_depends_target_imgui
+build cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_demo.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_demo.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Debug
-  DEP_FILE = vendors\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj.d
+  DEP_FILE = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\imgui_demo.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
-  OBJECT_FILE_DIR = vendors\imgui\CMakeFiles\imgui.dir
+  INCLUDES = -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui
 
-build vendors/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_draw.cpp || cmake_object_order_depends_target_imgui
+build cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_draw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_draw.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Debug
-  DEP_FILE = vendors\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj.d
+  DEP_FILE = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\imgui_draw.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
-  OBJECT_FILE_DIR = vendors\imgui\CMakeFiles\imgui.dir
+  INCLUDES = -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui
 
-build vendors/imgui/CMakeFiles/imgui.dir/imgui_tables.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_tables.cpp || cmake_object_order_depends_target_imgui
+build cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_tables.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_tables.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Debug
-  DEP_FILE = vendors\imgui\CMakeFiles\imgui.dir\imgui_tables.cpp.obj.d
+  DEP_FILE = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\imgui_tables.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
-  OBJECT_FILE_DIR = vendors\imgui\CMakeFiles\imgui.dir
+  INCLUDES = -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui
 
-build vendors/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_imgui
+build cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:/Coding/CPPClipping/vendors/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Debug
-  DEP_FILE = vendors\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj.d
+  DEP_FILE = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui\imgui_widgets.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
-  OBJECT_FILE_DIR = vendors\imgui\CMakeFiles\imgui.dir
+  INCLUDES = -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = cmake\imgui\CMakeFiles\imgui.dir\__\__\vendors\imgui
 
 
 # =============================================================================
@@ -176,49 +176,49 @@ build vendors/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj: CXX_COMPILER__im
 
 
 #############################################
-# Link the static library vendors\imgui\libimgui.a
+# Link the static library cmake\imgui\libimgui.a
 
-build vendors/imgui/libimgui.a: CXX_STATIC_LIBRARY_LINKER__imgui_Debug vendors/imgui/CMakeFiles/imgui.dir/backends/imgui_impl_dx11.cpp.obj vendors/imgui/CMakeFiles/imgui.dir/backends/imgui_impl_win32.cpp.obj vendors/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj vendors/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj vendors/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.obj vendors/imgui/CMakeFiles/imgui.dir/imgui_tables.cpp.obj vendors/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj
+build cmake/imgui/libimgui.a: CXX_STATIC_LIBRARY_LINKER__imgui_Debug cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/backends/imgui_impl_dx11.cpp.obj cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/backends/imgui_impl_win32.cpp.obj cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui.cpp.obj cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_demo.cpp.obj cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_draw.cpp.obj cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_tables.cpp.obj cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_widgets.cpp.obj
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = vendors\imgui\CMakeFiles\imgui.dir
+  OBJECT_DIR = cmake\imgui\CMakeFiles\imgui.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = vendors\imgui\libimgui.a
+  TARGET_FILE = cmake\imgui\libimgui.a
   TARGET_PDB = imgui.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build vendors/imgui/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Coding\CPPClipping\build\vendors\imgui && D:\Applications\CMake\bin\cmake-gui.exe -SD:\Coding\CPPClipping -BD:\Coding\CPPClipping\build"
+build cmake/imgui/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Coding\CPPClipping\build\cmake\imgui && D:\Applications\CMake\bin\cmake-gui.exe -SD:\Coding\CPPClipping -BD:\Coding\CPPClipping\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build vendors/imgui/edit_cache: phony vendors/imgui/CMakeFiles/edit_cache.util
+build cmake/imgui/edit_cache: phony cmake/imgui/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build vendors/imgui/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Coding\CPPClipping\build\vendors\imgui && D:\Applications\CMake\bin\cmake.exe --regenerate-during-build -SD:\Coding\CPPClipping -BD:\Coding\CPPClipping\build"
+build cmake/imgui/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Coding\CPPClipping\build\cmake\imgui && D:\Applications\CMake\bin\cmake.exe --regenerate-during-build -SD:\Coding\CPPClipping -BD:\Coding\CPPClipping\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build vendors/imgui/rebuild_cache: phony vendors/imgui/CMakeFiles/rebuild_cache.util
+build cmake/imgui/rebuild_cache: phony cmake/imgui/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
 
 build ClippingSoftware: phony ClippingSoftware.exe
 
-build imgui: phony vendors/imgui/libimgui.a
+build imgui: phony cmake/imgui/libimgui.a
 
-build libimgui.a: phony vendors/imgui/libimgui.a
+build libimgui.a: phony cmake/imgui/libimgui.a
 
 # =============================================================================
 # Folder targets.
@@ -228,14 +228,14 @@ build libimgui.a: phony vendors/imgui/libimgui.a
 #############################################
 # Folder: D:/Coding/CPPClipping/build
 
-build all: phony ClippingSoftware.exe vendors/imgui/all
+build all: phony ClippingSoftware.exe cmake/imgui/all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/Coding/CPPClipping/build/vendors/imgui
+# Folder: D:/Coding/CPPClipping/build/cmake/imgui
 
-build vendors/imgui/all: phony vendors/imgui/libimgui.a
+build cmake/imgui/all: phony cmake/imgui/libimgui.a
 
 # =============================================================================
 # Built-in targets
@@ -244,14 +244,14 @@ build vendors/imgui/all: phony vendors/imgui/libimgui.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja D$:/Coding/CPPClipping/build/cmake_install.cmake D$:/Coding/CPPClipping/build/vendors/imgui/cmake_install.cmake: RERUN_CMAKE | CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeRCCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake D$:/Coding/CPPClipping/CMakeLists.txt D$:/Coding/CPPClipping/vendors/imgui/CMakeLists.txt
+build build.ninja D$:/Coding/CPPClipping/build/cmake_install.cmake D$:/Coding/CPPClipping/build/cmake/imgui/cmake_install.cmake: RERUN_CMAKE | CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeRCCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake D$:/Coding/CPPClipping/CMakeLists.txt D$:/Coding/CPPClipping/cmake/imgui/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeRCCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake D$:/Coding/CPPClipping/CMakeLists.txt D$:/Coding/CPPClipping/vendors/imgui/CMakeLists.txt: phony
+build CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeRCCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Linker/LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-LLD.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-C.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang-CXX.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Clang.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake D$:/Applications/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake D$:/Coding/CPPClipping/CMakeLists.txt D$:/Coding/CPPClipping/cmake/imgui/CMakeLists.txt: phony
 
 
 #############################################

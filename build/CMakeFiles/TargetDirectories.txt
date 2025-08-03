@@ -1,6 +1,6 @@
 D:/Coding/CPPClipping/build/CMakeFiles/ClippingSoftware.dir
 D:/Coding/CPPClipping/build/CMakeFiles/edit_cache.dir
 D:/Coding/CPPClipping/build/CMakeFiles/rebuild_cache.dir
-D:/Coding/CPPClipping/build/vendors/imgui/CMakeFiles/imgui.dir
-D:/Coding/CPPClipping/build/vendors/imgui/CMakeFiles/edit_cache.dir
-D:/Coding/CPPClipping/build/vendors/imgui/CMakeFiles/rebuild_cache.dir
+D:/Coding/CPPClipping/build/cmake/imgui/CMakeFiles/imgui.dir
+D:/Coding/CPPClipping/build/cmake/imgui/CMakeFiles/edit_cache.dir
+D:/Coding/CPPClipping/build/cmake/imgui/CMakeFiles/rebuild_cache.dir

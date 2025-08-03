@@ -2,7 +2,7 @@
 1	564	7758926166372778	CMakeFiles/myapp.dir/main.cpp.obj	4caeebf518a14fa2
 568	653	7758926172045125	myapp.exe	b426b326343dd2ff
 5	569	7759473777120918	CMakeFiles/ClippingSoftware.dir/main.cpp.obj	e77e59ff804f2059
-1613	1695	7759506819137668	ClippingSoftware.exe	5f4d437503c8881e
+9	95	7759508093161724	ClippingSoftware.exe	af94a235b0f9d8b8
 12	586	7759507588126527	CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj	46141d11513d54d1
 15	729	7759506803159084	vendors/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj	7e1da498ae5a1bcb
 10	825	7759506803109069	vendors/imgui/CMakeFiles/imgui.dir/backends/imgui_impl_win32.cpp.obj	41f8f0dfa5ee5304
@@ -12,4 +12,13 @@
 22	1178	7759506803229070	vendors/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj	d902f65136f5bdd1
 12	1480	7759506803129068	vendors/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj	2037ade7997fc78a
 1480	1612	7759506817811943	vendors/imgui/libimgui.a	258f609e8ba7607d
-9	95	7759508093161724	ClippingSoftware.exe	af94a235b0f9d8b8
+16	586	7759511766327407	cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_demo.cpp.obj	406028adbd14b5e9
+12	725	7759511766287399	cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/backends/imgui_impl_win32.cpp.obj	7efb9f37dae86cdf
+21	746	7759511766377407	cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_tables.cpp.obj	12491b46f548e66b
+26	810	7759511766432521	CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj	b2879459ad2981d5
+9	858	7759511766267394	cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/backends/imgui_impl_dx11.cpp.obj	f3d9d04052ffdb8d
+19	956	7759511766357395	cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_draw.cpp.obj	a193c89299574858
+24	1052	7759511766412452	cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui_widgets.cpp.obj	6fb9c11206ac432d
+14	1315	7759511766307401	cmake/imgui/CMakeFiles/imgui.dir/__/__/vendors/imgui/imgui.cpp.obj	98f7aee6fe83cadc
+1315	1393	7759511779324751	cmake/imgui/libimgui.a	5b61f4d76b436c16
+1393	1482	7759511780095897	ClippingSoftware.exe	4fce7f8649b257

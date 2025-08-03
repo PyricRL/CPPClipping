@@ -4,7 +4,7 @@ project(ClippingSoftware)
 set(CMAKE_CXX_COMPILER clang++)
 set(CMAKE_C_COMPILER clang)
 
-add_subdirectory(vendors/imgui)
+add_subdirectory(cmake/imgui)
 
 add_executable(ClippingSoftware src/main.cpp)
 
