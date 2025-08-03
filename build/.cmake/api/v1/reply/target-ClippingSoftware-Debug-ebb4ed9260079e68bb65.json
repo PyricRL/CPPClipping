@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "myapp.exe"
+			"path" : "ClippingSoftware.exe"
 		},
 		{
-			"path" : "myapp.pdb"
+			"path" : "ClippingSoftware.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -48,7 +48,7 @@
 			]
 		}
 	],
-	"id" : "myapp::@6890427a1f51a3e7e1df",
+	"id" : "ClippingSoftware::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -64,8 +64,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "myapp",
-	"nameOnDisk" : "myapp.exe",
+	"name" : "ClippingSoftware",
+	"nameOnDisk" : "ClippingSoftware.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -86,7 +86,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "src/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

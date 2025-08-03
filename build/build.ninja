@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: MyApp
+# Project: ClippingSoftware
 # Configurations: Debug
 # =============================================================================
 
@@ -41,39 +41,39 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = D$:/Coding/CPPClipping/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target myapp
+# Object build statements for EXECUTABLE target ClippingSoftware
 
 
 #############################################
-# Order-only phony target for myapp
+# Order-only phony target for ClippingSoftware
 
-build cmake_object_order_depends_target_myapp: phony || .
+build cmake_object_order_depends_target_ClippingSoftware: phony || .
 
-build CMakeFiles/myapp.dir/main.cpp.obj: CXX_COMPILER__myapp_unscanned_Debug D$:/Coding/CPPClipping/main.cpp || cmake_object_order_depends_target_myapp
+build CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj: CXX_COMPILER__ClippingSoftware_unscanned_Debug D$:/Coding/CPPClipping/src/main.cpp || cmake_object_order_depends_target_ClippingSoftware
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\myapp.dir\main.cpp.obj.d
+  DEP_FILE = CMakeFiles\ClippingSoftware.dir\src\main.cpp.obj.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles\myapp.dir
-  OBJECT_FILE_DIR = CMakeFiles\myapp.dir
+  OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
+  OBJECT_FILE_DIR = CMakeFiles\ClippingSoftware.dir\src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target myapp
+# Link build statements for EXECUTABLE target ClippingSoftware
 
 
 #############################################
-# Link the executable myapp.exe
+# Link the executable ClippingSoftware.exe
 
-build myapp.exe: CXX_EXECUTABLE_LINKER__myapp_Debug CMakeFiles/myapp.dir/main.cpp.obj
+build ClippingSoftware.exe: CXX_EXECUTABLE_LINKER__ClippingSoftware_Debug CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\myapp.dir
+  OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = myapp.exe
-  TARGET_IMPLIB = libmyapp.dll.a
-  TARGET_PDB = myapp.exe.dbg
+  TARGET_FILE = ClippingSoftware.exe
+  TARGET_IMPLIB = libClippingSoftware.dll.a
+  TARGET_PDB = ClippingSoftware.exe.dbg
 
 
 #############################################
@@ -102,7 +102,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build myapp: phony myapp.exe
+build ClippingSoftware: phony ClippingSoftware.exe
 
 # =============================================================================
 # Folder targets.
@@ -112,7 +112,7 @@ build myapp: phony myapp.exe
 #############################################
 # Folder: D:/Coding/CPPClipping/build
 
-build all: phony myapp.exe
+build all: phony ClippingSoftware.exe
 
 # =============================================================================
 # Built-in targets

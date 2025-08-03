@@ -1,3 +1,7 @@
 # ninja log v7
 1	564	7758926166372778	CMakeFiles/myapp.dir/main.cpp.obj	4caeebf518a14fa2
 568	653	7758926172045125	myapp.exe	b426b326343dd2ff
+5	569	7759473777120918	CMakeFiles/ClippingSoftware.dir/main.cpp.obj	e77e59ff804f2059
+572	651	7759473782792604	ClippingSoftware.exe	cf2b44ae881cdd92
+2	532	7759476934014482	CMakeFiles/ClippingSoftware.dir/src/main.cpp.obj	5d635520b37a3b4b
+535	613	7759476939346218	ClippingSoftware.exe	b61523c669b00a34

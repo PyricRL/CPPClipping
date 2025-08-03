@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
-project(MyApp)
+project(ClippingSoftware)
 
 set(CMAKE_CXX_COMPILER clang++)
 set(CMAKE_C_COMPILER clang)
 
-add_executable(myapp main.cpp)
+add_executable(ClippingSoftware src/main.cpp)

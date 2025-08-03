@@ -1,8 +1,8 @@
 [
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -g -o CMakeFiles\\myapp.dir\\main.cpp.obj -c D:\\Coding\\CPPClipping\\main.cpp",
-  "file": "D:\\Coding\\CPPClipping\\main.cpp",
-  "output": "CMakeFiles\\myapp.dir\\main.cpp.obj"
+  "command": "clang++ -g -o CMakeFiles\\ClippingSoftware.dir\\src\\main.cpp.obj -c D:\\Coding\\CPPClipping\\src\\main.cpp",
+  "file": "D:\\Coding\\CPPClipping\\src\\main.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\src\\main.cpp.obj"
 }
 ]

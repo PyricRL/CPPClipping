@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "MyApp",
+					"name" : "ClippingSoftware",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "myapp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-myapp-Debug-9515b717e0b7759d8f8f.json",
-					"name" : "myapp",
+					"id" : "ClippingSoftware::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClippingSoftware-Debug-ebb4ed9260079e68bb65.json",
+					"name" : "ClippingSoftware",
 					"projectIndex" : 0
 				}
 			]
