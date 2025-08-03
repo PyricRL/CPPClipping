@@ -1,8 +1,50 @@
 [
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -g -o CMakeFiles\\ClippingSoftware.dir\\src\\main.cpp.obj -c D:\\Coding\\CPPClipping\\src\\main.cpp",
+  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\main.cpp.obj -c D:\\Coding\\CPPClipping\\src\\main.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\main.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o vendors\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_dx11.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\backends\\imgui_impl_dx11.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\backends\\imgui_impl_dx11.cpp",
+  "output": "vendors\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_dx11.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o vendors\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_win32.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\backends\\imgui_impl_win32.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\backends\\imgui_impl_win32.cpp",
+  "output": "vendors\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_win32.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui.cpp",
+  "output": "vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_demo.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_demo.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_demo.cpp",
+  "output": "vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_demo.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_draw.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_draw.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_draw.cpp",
+  "output": "vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_draw.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_tables.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_tables.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_tables.cpp",
+  "output": "vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_tables.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -g -o vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_widgets.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_widgets.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\imgui_widgets.cpp",
+  "output": "vendors\\imgui\\CMakeFiles\\imgui.dir\\imgui_widgets.cpp.obj"
 }
 ]
