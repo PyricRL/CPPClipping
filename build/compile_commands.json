@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -g -o CMakeFiles\\myapp.dir\\main.cpp.obj -c D:\\Coding\\CPPClipping\\main.cpp",
+  "file": "D:\\Coding\\CPPClipping\\main.cpp",
+  "output": "CMakeFiles\\myapp.dir\\main.cpp.obj"
+}
+]

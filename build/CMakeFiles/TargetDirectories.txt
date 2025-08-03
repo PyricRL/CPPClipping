@@ -1,0 +1,3 @@
+D:/Coding/CPPClipping/build/CMakeFiles/myapp.dir
+D:/Coding/CPPClipping/build/CMakeFiles/edit_cache.dir
+D:/Coding/CPPClipping/build/CMakeFiles/rebuild_cache.dir
