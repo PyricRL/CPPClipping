@@ -67,6 +67,12 @@ int main(int, char**)
     style.ScaleAllSizes(main_scale);        // Bake a fixed style scale. (until we have a solution for dynamic style scaling, changing this requires resetting Style + calling this again)
     style.FontScaleDpi = main_scale;        // Set initial font scale. (using io.ConfigDpiScaleFonts=true makes this unnecessary. We leave both here for documentation purpose)
 
+    // styling 
+    style.WindowRounding = 10.0f;
+    style.FrameRounding = 5.0f;
+    style.ScrollbarRounding = 5.0f;
+    style.GrabRounding = 5.0f;
+
     // Setup Platform/Renderer backends
     ImGui_ImplWin32_Init(hwnd);
     ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);

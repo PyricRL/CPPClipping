@@ -52,7 +52,7 @@ rule CXX_COMPILER__imgui_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__imgui_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && D:\Applications\CMake\bin\cmake.exe -E rm -f $TARGET_FILE && C:\msys64\clang64\bin\llvm-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\msys64\clang64\bin\llvm-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\clang64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\msys64\clang64\bin\llvm-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\msys64\clang64\bin\llvm-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -61,7 +61,7 @@ rule CXX_STATIC_LIBRARY_LINKER__imgui_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = D:\Applications\CMake\bin\cmake.exe --regenerate-during-build -SD:\Coding\CPPClipping -BD:\Coding\CPPClipping\build
+  command = C:\msys64\clang64\bin\cmake.exe --regenerate-during-build -SD:\Coding\CPPClipping -BD:\Coding\CPPClipping\build
   description = Re-running CMake...
   generator = 1
 
