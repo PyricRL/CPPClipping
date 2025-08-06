@@ -53,7 +53,7 @@ build CMakeFiles/ClippingSoftware.dir/src/gui/main.cpp.obj: CXX_COMPILER__Clippi
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ClippingSoftware.dir\src\gui\main.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
   OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
   OBJECT_FILE_DIR = CMakeFiles\ClippingSoftware.dir\src\gui
 
@@ -61,7 +61,7 @@ build CMakeFiles/ClippingSoftware.dir/src/logic/clipping_storage.cpp.obj: CXX_CO
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ClippingSoftware.dir\src\logic\clipping_storage.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
   OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
   OBJECT_FILE_DIR = CMakeFiles\ClippingSoftware.dir\src\logic
 

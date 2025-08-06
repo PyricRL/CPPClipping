@@ -16,7 +16,7 @@ target_include_directories(ClippingSoftware PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/vendors/imgui
     ${CMAKE_CURRENT_SOURCE_DIR}/vendors/imgui/backends
-    ${CMAKE_CURRENT_SOURCE_DIR}/vendors/imFileDialog
+    ${CMAKE_CURRENT_SOURCE_DIR}/vendors/imguiFileDialog
     ${CMAKE_CURRENT_SOURCE_DIR}/vendors/
 )
 

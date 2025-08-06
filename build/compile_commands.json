@@ -1,13 +1,13 @@
 [
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\gui\\main.cpp.obj -c D:\\Coding\\CPPClipping\\src\\gui\\main.cpp",
+  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\gui\\main.cpp.obj -c D:\\Coding\\CPPClipping\\src\\gui\\main.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\gui\\main.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\gui\\main.cpp.obj"
 },
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\clipping_storage.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\clipping_storage.cpp",
+  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\clipping_storage.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\clipping_storage.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\logic\\clipping_storage.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\clipping_storage.cpp.obj"
 },
