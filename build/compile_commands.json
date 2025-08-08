@@ -13,6 +13,18 @@
 },
 {
   "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\file_handler.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\file_handler.cpp",
+  "file": "D:\\Coding\\CPPClipping\\src\\logic\\file_handler.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\file_handler.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
   "command": "clang++ -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o cmake\\imgui\\CMakeFiles\\imgui.dir\\__\\__\\vendors\\imgui\\backends\\imgui_impl_dx11.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imgui\\backends\\imgui_impl_dx11.cpp",
   "file": "D:\\Coding\\CPPClipping\\vendors\\imgui\\backends\\imgui_impl_dx11.cpp",
   "output": "cmake\\imgui\\CMakeFiles\\imgui.dir\\__\\__\\vendors\\imgui\\backends\\imgui_impl_dx11.cpp.obj"

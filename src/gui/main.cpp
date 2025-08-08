@@ -9,6 +9,7 @@
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
+#include "ImGuiFileDialog.h"
 #include <cstddef>
 #include <d3d11.h>
 #include <string>
@@ -17,6 +18,7 @@
 #include <windows.h>
 
 #include "../logic/clipping_storage.hpp"
+#include "../logic/file_handler.hpp"
 
 // Data
 static ID3D11Device*            g_pd3dDevice = nullptr;
@@ -234,9 +236,26 @@ int main(int, char**)
         }
         ImGui::End();
 
-        if (ImGui::Begin("Select Folder")) {
+        if (ImGui::Begin("##OpenDialogCommand")) {
+            if (ImGui::Button("Open File Dialog")) {
+                IGFD::FileDialogConfig config;
+                config.path = WStringToString(GetVideosFolder());
+                ImGuiFileDialog::Instance()->OpenDialog("ChooseFileDlgKey", "Choose Folder", nullptr, config);
+            }
         }
         ImGui::End();
+        
+        // display
+        if (ImGuiFileDialog::Instance()->Display("ChooseFileDlgKey")) { // => will show a dialog
+            if (ImGuiFileDialog::Instance()->IsOk()) { // action if OK
+                std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
+                std::string filePath = ImGuiFileDialog::Instance()->GetCurrentPath();
+                // action
+            }
+            
+            // close
+            ImGuiFileDialog::Instance()->Close();
+        }
 
         // Rendering
         ImGui::Render();

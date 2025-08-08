@@ -65,6 +65,22 @@ build CMakeFiles/ClippingSoftware.dir/src/logic/clipping_storage.cpp.obj: CXX_CO
   OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
   OBJECT_FILE_DIR = CMakeFiles\ClippingSoftware.dir\src\logic
 
+build CMakeFiles/ClippingSoftware.dir/vendors/imguiFileDialog/ImGuiFileDialog.cpp.obj: CXX_COMPILER__ClippingSoftware_unscanned_Debug D$:/Coding/CPPClipping/vendors/imguiFileDialog/ImGuiFileDialog.cpp || cmake_object_order_depends_target_ClippingSoftware
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ClippingSoftware.dir\vendors\imguiFileDialog\ImGuiFileDialog.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
+  OBJECT_FILE_DIR = CMakeFiles\ClippingSoftware.dir\vendors\imguiFileDialog
+
+build CMakeFiles/ClippingSoftware.dir/src/logic/file_handler.cpp.obj: CXX_COMPILER__ClippingSoftware_unscanned_Debug D$:/Coding/CPPClipping/src/logic/file_handler.cpp || cmake_object_order_depends_target_ClippingSoftware
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ClippingSoftware.dir\src\logic\file_handler.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends
+  OBJECT_DIR = CMakeFiles\ClippingSoftware.dir
+  OBJECT_FILE_DIR = CMakeFiles\ClippingSoftware.dir\src\logic
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ClippingSoftware
@@ -73,7 +89,7 @@ build CMakeFiles/ClippingSoftware.dir/src/logic/clipping_storage.cpp.obj: CXX_CO
 #############################################
 # Link the executable ClippingSoftware.exe
 
-build ClippingSoftware.exe: CXX_EXECUTABLE_LINKER__ClippingSoftware_Debug CMakeFiles/ClippingSoftware.dir/src/gui/main.cpp.obj CMakeFiles/ClippingSoftware.dir/src/logic/clipping_storage.cpp.obj | cmake/imgui/libimgui.a || cmake/imgui/libimgui.a
+build ClippingSoftware.exe: CXX_EXECUTABLE_LINKER__ClippingSoftware_Debug CMakeFiles/ClippingSoftware.dir/src/gui/main.cpp.obj CMakeFiles/ClippingSoftware.dir/src/logic/clipping_storage.cpp.obj CMakeFiles/ClippingSoftware.dir/vendors/imguiFileDialog/ImGuiFileDialog.cpp.obj CMakeFiles/ClippingSoftware.dir/src/logic/file_handler.cpp.obj | cmake/imgui/libimgui.a || cmake/imgui/libimgui.a
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = cmake/imgui/libimgui.a  -ld3d11  -ldxgi  -ld3dcompiler  -ldwmapi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
