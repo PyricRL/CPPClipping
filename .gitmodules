@@ -1,6 +1,9 @@
 [submodule "vendors/imgui"]
 	path = vendors/imgui
 	url = https://github.com/ocornut/imgui
-[submodule "vendors/libdshowcapture/libdshowcapture"]
-	path = vendors/libdshowcapture/libdshowcapture
+[submodule "libdshowcapture"]
+	path = libdshowcapture
+	url = https://github.com/obsproject/libdshowcapture.git
+[submodule "vendors/libdshowcapture"]
+	path = vendors/libdshowcapture
 	url = https://github.com/obsproject/libdshowcapture.git
