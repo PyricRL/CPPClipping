@@ -7,7 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(cmake/imgui)
 
-add_executable(ClippingSoftware src/gui/main.cpp src/logic/clipping_storage.cpp vendors/imguiFileDialog/ImGuiFileDialog.cpp src/logic/file_handler.cpp)
+add_executable(ClippingSoftware src/gui/main.cpp src/logic/clipping_storage.cpp vendors/imguiFileDialog/ImGuiFileDialog.cpp src/logic/file_handler.cpp src/logic/settings_loader.cpp src/logic/setup_hotkey.cpp)
 
 target_link_libraries(ClippingSoftware PRIVATE imgui)
 
@@ -17,6 +17,7 @@ target_include_directories(ClippingSoftware PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/vendors/imgui
     ${CMAKE_CURRENT_SOURCE_DIR}/vendors/imgui/backends
     ${CMAKE_CURRENT_SOURCE_DIR}/vendors/imguiFileDialog
+    ${CMAKE_CURRENT_SOURCE_DIR}/vendors/libdshowcapture/
     ${CMAKE_CURRENT_SOURCE_DIR}/vendors/
 )
 

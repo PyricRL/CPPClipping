@@ -7,6 +7,8 @@
 
 #include "clip.hpp"
 
+static const std::string CLIPS_FILE = "../json_storage/clips.json";
+
 int writeToFile(const std::string& gameName) {
     time_t timestamp;
     time(&timestamp);
@@ -21,7 +23,7 @@ int writeToFile(const std::string& gameName) {
     newClip["title"] = title;
     newClip["game"] = gameName;
 
-    std::ifstream inFile("../json_storage/clip.json");
+    std::ifstream inFile(CLIPS_FILE);
 
     if (!inFile.is_open()) {
         std::cerr << "Failed to open file" << std::endl;
@@ -43,7 +45,7 @@ int writeToFile(const std::string& gameName) {
 
     clip.emplace_back(newClip);
 
-    std::ofstream outFile("../json_storage/clip.json");
+    std::ofstream outFile(CLIPS_FILE);
 
     if (!outFile.is_open()) {
         std::cerr << "Failed to open file" << std::endl;
@@ -60,7 +62,7 @@ int writeToFile(const std::string& gameName) {
 
 std::vector<Clip> readFromFile() {
     std::vector<Clip> clipsVec;
-    std::ifstream inFile("../json_storage/clip.json");
+    std::ifstream inFile(CLIPS_FILE);
 
     if (!inFile.is_open()) {
         std::cerr << "Failed to open file" << std::endl;

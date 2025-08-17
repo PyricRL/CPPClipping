@@ -18,7 +18,9 @@
 #include <windows.h>
 
 #include "../logic/clipping_storage.hpp"
+#include "../logic/settings_loader.hpp"
 #include "../logic/file_handler.hpp"
+#include "../logic/setup_hotkey.hpp"
 
 // Data
 static ID3D11Device*            g_pd3dDevice = nullptr;
@@ -67,9 +69,16 @@ std::string WStringToUTF8(const std::wstring& wstr) {
     return result;
 }
 
+// hotkey registry
+bool hotkeyRegistered = false;
+
 // Main code
 int main(int, char**)
-{
+{   
+    if (get_setting<std::string>("first_run") == "true") {
+        set_settings("save_folder", WStringToString(GetVideosFolder()));
+        set_settings("first_run", "false");
+    }
     // Make process DPI aware and obtain main monitor scale
     ImGui_ImplWin32_EnableDpiAwareness();
     float main_scale = ImGui_ImplWin32_GetDpiScaleForMonitor(::MonitorFromPoint(POINT{ 0, 0 }, MONITOR_DEFAULTTOPRIMARY));
@@ -77,7 +86,16 @@ int main(int, char**)
     // Create application window
     WNDCLASSEXW wc = { sizeof(wc), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(nullptr), nullptr, nullptr, nullptr, nullptr, L"ImGui Example", nullptr };
     ::RegisterClassExW(&wc);
-    HWND hwnd = ::CreateWindowW(wc.lpszClassName, L"Dear ImGui DirectX11 Example", WS_OVERLAPPEDWINDOW, 100, 100, (int)(1280 * main_scale), (int)(800 * main_scale), nullptr, nullptr, wc.hInstance, nullptr);
+    HWND hwnd = ::CreateWindowW(wc.lpszClassName, L"Clipping Software", WS_OVERLAPPEDWINDOW, 100, 100, (int)(1280 * main_scale), (int)(800 * main_scale), nullptr, nullptr, wc.hInstance, nullptr);
+
+    // register hotkey
+    if (selectedKey != 0 && selectedModifiers != 0 && hotkeyRegistered == false) {
+        if (register_global_hotkey(hwnd, selectedKey, selectedModifiers, []() {
+            std::cout << "Hotkey pressed!" << std::endl;
+        }) == 0) {
+            hotkeyRegistered = true;
+        }
+    }
 
     // Initialize Direct3D
     if (!CreateDeviceD3D(hwnd))
@@ -145,6 +163,11 @@ int main(int, char**)
     int sortType = 0;
     const char* sortItems[] = { "Title", "Duration", "Game", "Date"};
 
+    // hotkey timing
+    bool waitingForHotkey = false;
+    DWORD hotkeyStartTime = 0;
+    const DWORD hotkeyTimeout = 3000; // 3 seconds
+
     // Main loop
     bool done = false;
     bool opened = true;
@@ -157,6 +180,9 @@ int main(int, char**)
         {
             ::TranslateMessage(&msg);
             ::DispatchMessage(&msg);
+
+            handle_hotkey_messages(msg);
+            
             if (msg.message == WM_QUIT)
                 done = true;
         }
@@ -239,9 +265,11 @@ int main(int, char**)
         if (ImGui::Begin("##OpenDialogCommand")) {
             if (ImGui::Button("Open File Dialog")) {
                 IGFD::FileDialogConfig config;
-                config.path = WStringToString(GetVideosFolder());
+                config.path = get_setting<std::string>("save_folder").c_str();
                 ImGuiFileDialog::Instance()->OpenDialog("ChooseFileDlgKey", "Choose Folder", nullptr, config);
             }
+
+            ImGui::Text("%s", get_setting<std::string>("save_folder").c_str());
         }
         ImGui::End();
         
@@ -251,10 +279,54 @@ int main(int, char**)
                 std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
                 std::string filePath = ImGuiFileDialog::Instance()->GetCurrentPath();
                 // action
+                set_settings("save_folder", filePath);
             }
             
             // close
             ImGuiFileDialog::Instance()->Close();
+        }
+
+        if (ImGui::Begin("Hotkey Selection")) {
+            static std::string buttonLabel = "Set Hotkey";
+            static int currentKey = 0;
+            static UINT currentModifiers = 0;
+
+            if (ImGui::Button(buttonLabel.c_str())) {
+                waitingForHotkey = true;
+                buttonLabel = "Press a key";
+                hotkeyStartTime = GetTickCount();
+            }
+
+            if (waitingForHotkey) {
+                if (GetTickCount() - hotkeyStartTime > hotkeyTimeout) {
+                    waitingForHotkey = false;
+                    ImGui::Text("Hotkey capture timed out.");
+                } else {
+                    set_hotkey(waitingForHotkey);
+                }
+            }
+
+            if (!waitingForHotkey) {
+                if (selectedKey != currentKey || selectedModifiers != currentModifiers) {
+                    if (hotkeyRegistered) {
+                        UnregisterHotKey(hwnd, HOTKEY_ID);
+                        hotkeyRegistered = false;
+                    }
+
+                    if (register_global_hotkey(hwnd, selectedKey, selectedModifiers, []() {
+                        std::cout << "Hotkey pressed!" << std::endl;
+                    }) == 0) {
+                        hotkeyRegistered = true;
+                        currentKey = selectedKey;
+                        currentModifiers = selectedModifiers;
+                    }
+
+                    buttonLabel = "Set Hotkey"; // reset label
+                }
+            }
+
+            ImGui::Text("%s", hotkey_to_string().c_str());
+            ImGui::End();
         }
 
         // Rendering
