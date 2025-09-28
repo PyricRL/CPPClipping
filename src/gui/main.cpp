@@ -21,6 +21,7 @@
 #include "../logic/settings_loader.hpp"
 #include "../logic/file_handler.hpp"
 #include "../logic/setup_hotkey.hpp"
+#include "../logic/screen_capture.hpp"
 
 // Data
 static ID3D11Device*            g_pd3dDevice = nullptr;
@@ -71,6 +72,9 @@ std::string WStringToUTF8(const std::wstring& wstr) {
 
 // hotkey registry
 bool hotkeyRegistered = false;
+
+// get audio devices
+auto audioDevices = getAudioDevice();
 
 // Main code
 int main(int, char**)
@@ -327,6 +331,28 @@ int main(int, char**)
 
             ImGui::Text("%s", hotkey_to_string().c_str());
             ImGui::End();
+        }
+
+        if(ImGui::Begin("Button")) {
+            if (ImGui::Button("print")) {
+                getAudioDevice();
+            }
+            ImGui::End();
+        }
+
+        static int selectedIndex = -1;
+
+        if (ImGui::BeginCombo("Select Audio Device", selectedIndex >= 0 ? std::string(audioDevices[selectedIndex].begin(), audioDevices[selectedIndex].end()).c_str() : "None")) {
+            for (int i = 0; i < audioDevices.size(); i++) {
+                bool isSelected = (selectedIndex == i);
+                if (ImGui::Selectable(std::string(audioDevices[i].begin(), audioDevices[i].end()).c_str(), isSelected)) {
+                    selectedIndex = i;
+                    std::wcout << L"Selected: " << audioDevices[i] << "\n";
+                }
+                if (isSelected)
+                    ImGui::SetItemDefaultFocus();
+            }
+            ImGui::EndCombo();
         }
 
         // Rendering

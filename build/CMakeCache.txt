@@ -270,6 +270,15 @@ Project_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=D:/Coding/CPPClipping
 
+//Value Computed by CMake
+libdshowcapture_BINARY_DIR:STATIC=D:/Coding/CPPClipping/build/vendors/libdshowcapture
+
+//Value Computed by CMake
+libdshowcapture_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+libdshowcapture_SOURCE_DIR:STATIC=D:/Coding/CPPClipping/vendors/libdshowcapture
+
 
 ########################
 # INTERNAL cache entries

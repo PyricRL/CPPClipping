@@ -1436,6 +1436,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "D:/Coding/CPPClipping"
+		},
+		{
+			"name" : "libdshowcapture_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Coding/CPPClipping/build/vendors/libdshowcapture"
+		},
+		{
+			"name" : "libdshowcapture_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "libdshowcapture_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Coding/CPPClipping/vendors/libdshowcapture"
 		}
 	],
 	"kind" : "cache",

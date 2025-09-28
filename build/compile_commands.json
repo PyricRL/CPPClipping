@@ -1,39 +1,129 @@
 [
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\gui\\main.cpp.obj -c D:\\Coding\\CPPClipping\\src\\gui\\main.cpp",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\gui\\main.cpp.obj -c D:\\Coding\\CPPClipping\\src\\gui\\main.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\gui\\main.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\gui\\main.cpp.obj"
 },
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\clipping_storage.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\clipping_storage.cpp",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\clipping_storage.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\clipping_storage.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\logic\\clipping_storage.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\clipping_storage.cpp.obj"
 },
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp",
-  "file": "D:\\Coding\\CPPClipping\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp",
-  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp.obj"
-},
-{
-  "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\file_handler.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\file_handler.cpp",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\file_handler.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\file_handler.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\logic\\file_handler.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\file_handler.cpp.obj"
 },
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\settings_loader.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\settings_loader.cpp",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\settings_loader.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\settings_loader.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\logic\\settings_loader.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\settings_loader.cpp.obj"
 },
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\setup_hotkey.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\setup_hotkey.cpp",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\setup_hotkey.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\setup_hotkey.cpp",
   "file": "D:\\Coding\\CPPClipping\\src\\logic\\setup_hotkey.cpp",
   "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\setup_hotkey.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\screen_capture.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\screen_capture.cpp",
+  "file": "D:\\Coding\\CPPClipping\\src\\logic\\screen_capture.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\screen_capture.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\imguiFileDialog\\ImGuiFileDialog.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\capture-filter.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\capture-filter.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\capture-filter.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\capture-filter.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\output-filter.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\output-filter.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\output-filter.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\output-filter.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshowcapture.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshowcapture.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshowcapture.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshowcapture.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshowencode.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshowencode.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshowencode.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshowencode.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\device.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\device.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\device.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\device.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\encoder.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\encoder.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\encoder.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\encoder.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-base.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-base.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-base.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-base.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-demux.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-demux.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-demux.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-demux.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-enum.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-enum.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-enum.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-enum.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-formats.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-formats.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-formats.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-formats.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-media-type.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-media-type.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-media-type.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-media-type.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-encoded-device.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-encoded-device.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\dshow-encoded-device.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\dshow-encoded-device.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\log.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\log.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\log.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\log.cpp.obj"
+},
+{
+  "directory": "D:/Coding/CPPClipping/build",
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\obs_stubs.cpp.obj -c D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\obs_stubs.cpp",
+  "file": "D:\\Coding\\CPPClipping\\vendors\\libdshowcapture\\source\\obs_stubs.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\vendors\\libdshowcapture\\source\\obs_stubs.cpp.obj"
 },
 {
   "directory": "D:/Coding/CPPClipping/build",

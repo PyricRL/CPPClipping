@@ -21,4 +21,3 @@ std::string WStringToString(const std::wstring& wstr) {
     WideCharToMultiByte(CP_UTF8, 0, &wstr[0], (int)wstr.size(), &strTo[0], size_needed, nullptr, nullptr);
     return strTo;
 }
-
