@@ -6,6 +6,7 @@
 // - Documentation        https://dearimgui.com/docs (same as your local docs/ folder).
 // - Introduction, links and more at the top of imgui.cpp
 
+// #include "dshowcapture.hpp"
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
@@ -21,7 +22,8 @@
 #include "../logic/settings_loader.hpp"
 #include "../logic/file_handler.hpp"
 #include "../logic/setup_hotkey.hpp"
-#include "../logic/screen_capture.hpp"
+#include "../logic/audio_handler.hpp"
+// #include "imgui_internal.h"
 
 // Data
 static ID3D11Device*            g_pd3dDevice = nullptr;
@@ -73,12 +75,23 @@ std::string WStringToUTF8(const std::wstring& wstr) {
 // hotkey registry
 bool hotkeyRegistered = false;
 
-// get audio devices
-auto audioDevices = getAudioDevice();
+// init audio devices
+std::vector<Device> gAudioDevices;
+std::vector<Device> gMicDevices;
 
 // Main code
 int main(int, char**)
 {   
+    HRESULT hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
+    if (FAILED(hr)) {
+        std::cerr << "CoInitializeEx failed\n";
+        return -1;
+    }
+
+    // get audio devices after windows com is inited
+    gAudioDevices = getOutputDevices();
+    gMicDevices = getInputDevices();
+
     if (get_setting<std::string>("first_run") == "true") {
         set_settings("save_folder", WStringToString(GetVideosFolder()));
         set_settings("first_run", "false");
@@ -334,25 +347,59 @@ int main(int, char**)
         }
 
         if(ImGui::Begin("Button")) {
-            if (ImGui::Button("print")) {
-                getAudioDevice();
+            if (ImGui::Button("print audio devices")) {
+                std::vector<Device> input_dev = getInputDevices();
+                std::vector<Device> output_dev = getOutputDevices();
+
+                std::cout << "Input Devices" << std::endl;
+                for (int i = 0; i < input_dev.size(); i++) {
+                    std::wcout << input_dev[i].name << std::endl;
+                }
+
+                std::cout << "Output Devices" << std::endl;
+                for (int i = 0; i < output_dev.size(); i++) {
+                    std::wcout << output_dev[i].name << std::endl;
+                }
             }
             ImGui::End();
         }
 
-        static int selectedIndex = -1;
+        static int selectedHeadphonesIndex = getDefaultDeviceIndex(eRender, getOutputDevices());
+        static int selectedMicrophoneIndex = getDefaultDeviceIndex(eCapture, getInputDevices());
 
-        if (ImGui::BeginCombo("Select Audio Device", selectedIndex >= 0 ? std::string(audioDevices[selectedIndex].begin(), audioDevices[selectedIndex].end()).c_str() : "None")) {
-            for (int i = 0; i < audioDevices.size(); i++) {
-                bool isSelected = (selectedIndex == i);
-                if (ImGui::Selectable(std::string(audioDevices[i].begin(), audioDevices[i].end()).c_str(), isSelected)) {
-                    selectedIndex = i;
-                    std::wcout << L"Selected: " << audioDevices[i] << "\n";
+        if (ImGui::BeginCombo("Select Headphones", selectedHeadphonesIndex >= 0 ? WStringToUTF8(gAudioDevices[selectedHeadphonesIndex].name).c_str() : "None")) {
+            for (int i = 0; i < gAudioDevices.size(); i++) {
+                bool isSelected = (selectedHeadphonesIndex == i);
+                std::string label = WStringToUTF8(gAudioDevices[i].name) + "##" + std::to_string(i);
+                if (ImGui::Selectable(label.c_str(), isSelected)) {
+                    selectedHeadphonesIndex = i;
+                    std::wcout << L"Selected: " << gAudioDevices[i].name << "\n";
                 }
                 if (isSelected)
                     ImGui::SetItemDefaultFocus();
             }
             ImGui::EndCombo();
+        }
+
+        if (ImGui::BeginCombo("Select Microphone", selectedMicrophoneIndex >= 0 ? WStringToUTF8(gMicDevices[selectedMicrophoneIndex].name).c_str() : "None")) {
+            for (int i = 0; i < gMicDevices.size(); i++) {
+                bool isSelected = (selectedMicrophoneIndex == i);
+                std::string label = WStringToUTF8(gMicDevices[i].name) + "##" + std::to_string(i);
+                if (ImGui::Selectable(label.c_str(), isSelected)) {
+                    selectedMicrophoneIndex = i;
+                    std::wcout << L"Selected: " << gMicDevices[i].name << "\n";
+                }
+                if (isSelected)
+                    ImGui::SetItemDefaultFocus();
+            }
+            ImGui::EndCombo();
+        }
+
+        if (ImGui::Begin("Play Audio")) {
+            if (ImGui::Button("Play")) {
+                playTestAudio(selectedHeadphonesIndex);
+            }
+            ImGui::End();
         }
 
         // Rendering

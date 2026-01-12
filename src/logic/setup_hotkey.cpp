@@ -17,7 +17,7 @@ int register_global_hotkey(HWND hwnd, int key, UINT modifier, std::function<void
         return 1;
     }
 
-    std::cout << "Success" << std::endl;
+    std::cout << "Registered Hotkey Correctly!" << std::endl;
 
     return 0;
 }

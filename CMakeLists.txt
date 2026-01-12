@@ -16,7 +16,7 @@ add_executable(ClippingSoftware
     src/logic/file_handler.cpp 
     src/logic/settings_loader.cpp 
     src/logic/setup_hotkey.cpp 
-    src/logic/screen_capture.cpp
+    src/logic/audio_handler.cpp
 
     # ImGui source
     vendors/imguiFileDialog/ImGuiFileDialog.cpp 

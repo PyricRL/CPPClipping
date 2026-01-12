@@ -31,9 +31,9 @@
 },
 {
   "directory": "D:/Coding/CPPClipping/build",
-  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\screen_capture.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\screen_capture.cpp",
-  "file": "D:\\Coding\\CPPClipping\\src\\logic\\screen_capture.cpp",
-  "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\screen_capture.cpp.obj"
+  "command": "clang++ -DUNICODE -D_UNICODE -ID:/Coding/CPPClipping/src -ID:/Coding/CPPClipping/vendors/imgui -ID:/Coding/CPPClipping/vendors/imgui/backends -ID:/Coding/CPPClipping/vendors/imguiFileDialog -ID:/Coding/CPPClipping/vendors/libdshowcapture -ID:/Coding/CPPClipping/vendors -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui -ID:/Coding/CPPClipping/cmake/imgui/../../vendors/imgui/backends -g -o CMakeFiles\\ClippingSoftware.dir\\src\\logic\\audio_handler.cpp.obj -c D:\\Coding\\CPPClipping\\src\\logic\\audio_handler.cpp",
+  "file": "D:\\Coding\\CPPClipping\\src\\logic\\audio_handler.cpp",
+  "output": "CMakeFiles\\ClippingSoftware.dir\\src\\logic\\audio_handler.cpp.obj"
 },
 {
   "directory": "D:/Coding/CPPClipping/build",

@@ -280,7 +280,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/logic/screen_capture.cpp",
+			"path" : "src/logic/audio_handler.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
