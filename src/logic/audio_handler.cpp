@@ -1,7 +1,13 @@
 #include "audio_handler.hpp"
+#include <cstddef>
 #include <functiondiscoverykeys_devpkey.h>
 #include <audioclient.h>
+#include <minwindef.h>
+#include <psapi.h>
 #include <string>
+#include <vector>
+#include <windows.h>
+#include <winnt.h>
 
 std::vector<Device> getInputDevices() {
     std::vector<Device> devices;
@@ -19,6 +25,8 @@ std::vector<Device> getInputDevices() {
     for (UINT i = 0; i < count; ++i) {
         IMMDevice* device = nullptr;
         collection->Item(i, &device);
+
+        device->AddRef();
 
         IPropertyStore* props = nullptr;
         device->OpenPropertyStore(STGM_READ, &props);
@@ -59,6 +67,8 @@ std::vector<Device> getOutputDevices() {
     for (UINT i = 0; i < count; ++i) {
         IMMDevice* device = nullptr;
         collection->Item(i, &device);
+
+        device->AddRef();
 
         IPropertyStore* props = nullptr;
         device->OpenPropertyStore(STGM_READ, &props);
@@ -119,61 +129,167 @@ int getDefaultDeviceIndex(EDataFlow flow, const std::vector<Device>& devices) {
 }
 
 void playTestAudio(int deviceIndex) {
+    CoInitializeEx(nullptr, COINIT_MULTITHREADED);
+
+    if (deviceIndex < 0 || deviceIndex >= (int)gAudioDevices.size()) {
+        std::cout << "[Audio] ERROR: deviceIndex out of range\n";
+        return;
+    }
+
     IMMDevice* device = gAudioDevices[deviceIndex].device;
+    if (!device) {
+        std::cout << "[Audio] ERROR: device is null\n";
+        return;
+    }
+
     IAudioClient* audioClient = nullptr;
-    device->Activate(__uuidof(IAudioClient), CLSCTX_ALL, nullptr, (void**)&audioClient);
-
+    IAudioRenderClient* renderClient = nullptr;
     WAVEFORMATEX* pwfx = nullptr;
-    audioClient->GetMixFormat(&pwfx); // gets the default format for the device
 
-    audioClient->Initialize(
+    HRESULT hr;
+    hr = device->Activate(__uuidof(IAudioClient), CLSCTX_ALL, nullptr, (void**)&audioClient);
+    if (FAILED(hr)) {
+        std::cout << "[Audio] ERROR: Activate failed\n";
+        return;
+    }
+
+    hr = audioClient->GetMixFormat(&pwfx);
+    if (FAILED(hr) || !pwfx) {
+        std::cout << "[Audio] ERROR: GetMixFormat failed\n";
+        audioClient->Release();
+        return;
+    }
+
+    bool isFloat = false;
+
+    if (pwfx->wFormatTag == WAVE_FORMAT_IEEE_FLOAT) {
+        isFloat = true;
+    }
+    else if (pwfx->wFormatTag == WAVE_FORMAT_EXTENSIBLE) {
+        auto* wfe = (WAVEFORMATEXTENSIBLE*)pwfx;
+        if (wfe->SubFormat == KSDATAFORMAT_SUBTYPE_IEEE_FLOAT)
+            isFloat = true;
+    }
+
+    if (!isFloat) {
+        std::cout << "[Audio] ERROR: Unsupported format\n";
+        CoTaskMemFree(pwfx);
+        audioClient->Release();
+        return;
+    }
+    hr = audioClient->Initialize(
         AUDCLNT_SHAREMODE_SHARED,
         0,
-        10000000,  // buffer duration in 100-ns units (here 1 second)
+        10000000,
         0,
         pwfx,
         nullptr
     );
 
-    IAudioRenderClient* renderClient = nullptr;
-    audioClient->GetService(__uuidof(IAudioRenderClient), (void**)&renderClient);
+    if (FAILED(hr)) {
+        std::cout << "[Audio] ERROR: Initialize failed hr=0x" << std::hex << hr << std::dec << "\n";
+        CoTaskMemFree(pwfx);
+        audioClient->Release();
+        return;
+    }
 
-    UINT32 bufferFrames;
+    hr = audioClient->GetService(__uuidof(IAudioRenderClient), (void**)&renderClient);
+    if (FAILED(hr) || !renderClient) {
+        std::cout << "[Audio] ERROR: GetService failed\n";
+        CoTaskMemFree(pwfx);
+        audioClient->Release();
+        return;
+    }
+
+    UINT32 bufferFrames = 0;
     audioClient->GetBufferSize(&bufferFrames);
 
     audioClient->Start();
 
-    // --- WRITE AUDIO ---
+    UINT32 padding = 0;
+    audioClient->GetCurrentPadding(&padding);
+    UINT32 framesToWrite = bufferFrames - padding;
+
+    if (framesToWrite == 0) {
+        std::cout << "[Audio] ERROR: No space in buffer\n";
+        audioClient->Stop();
+        CoTaskMemFree(pwfx);
+        renderClient->Release();
+        audioClient->Release();
+        return;
+    }
+
     BYTE* data = nullptr;
-    renderClient->GetBuffer(bufferFrames, &data);
+    hr = renderClient->GetBuffer(framesToWrite, &data);
+    if (FAILED(hr) || !data) {
+        std::cout << "[Audio] ERROR: GetBuffer failed\n";
+        audioClient->Stop();
+        CoTaskMemFree(pwfx);
+        renderClient->Release();
+        audioClient->Release();
+        return;
+    }
 
     float* samples = (float*)data;
-
     int channels = pwfx->nChannels;
-    int sampleRate = pwfx->nSamplesPerSec;
+    int rate = pwfx->nSamplesPerSec;
 
-    float freq = 440.0f; // A4
     static float phase = 0.0f;
 
-    for (UINT32 i = 0; i < bufferFrames; i++) {
-        float value = sinf(phase);
+    for (UINT32 i = 0; i < framesToWrite; i++) {
+        float v = sinf(phase) * 0.2f;
+        for (int c = 0; c < channels; c++)
+            samples[i * channels + c] = v;
 
-        for (int c = 0; c < channels; c++) {
-            samples[i * channels + c] = value;
-        }
-
-        phase += 2.0f * 3.14159265f * freq / sampleRate;
+        phase += 2.0f * 3.14159265f * 440.0f / rate;
         if (phase > 2.0f * 3.14159265f)
             phase -= 2.0f * 3.14159265f;
     }
 
-    renderClient->ReleaseBuffer(bufferFrames, 0);
+    renderClient->ReleaseBuffer(framesToWrite, 0);
 
-    Sleep(1000); // let it play
+    Sleep(1000);
 
     audioClient->Stop();
 
     CoTaskMemFree(pwfx);
     renderClient->Release();
     audioClient->Release();
+}
+
+std::vector<Application> getApplicationIDs() {
+    std::vector<Application> apps;
+    DWORD pids[1024];
+    DWORD cb = 1024 * sizeof(DWORD);
+    DWORD cbNeeded = 0;
+
+    if (!EnumProcesses(pids, cb, &cbNeeded)) {
+        std::cout << ("Failed") << std::endl;
+        
+        return apps;
+    }
+
+    DWORD numPIDs = cbNeeded / sizeof(DWORD);
+    for (DWORD i = 0; i < numPIDs; ++i) {
+        printf("PID: %lu\n", pids[i]);
+        if (pids[i] == 0) continue;
+
+        HANDLE handle = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, false, pids[i]);
+
+        if (handle != NULL) {
+            WCHAR exePath[MAX_PATH];
+            DWORD size = MAX_PATH;
+            if (QueryFullProcessImageNameW(handle, 0, exePath, &size)) {
+                // compare only the executable name (case-insensitive)
+                const wchar_t* exeName = wcsrchr(exePath, L'\\');
+                if (exeName) exeName++; // skip the backslash
+                std::wstring wstr(exeName);
+                std::string str(wstr.begin(), wstr.end());
+
+                Application tempApp = {str, pids[i]};
+                apps.push_back(tempApp);
+            }
+        }
+    }
+    return apps;
 }

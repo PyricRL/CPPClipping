@@ -79,10 +79,14 @@ bool hotkeyRegistered = false;
 std::vector<Device> gAudioDevices;
 std::vector<Device> gMicDevices;
 
+// init process Ids
+std::vector<Application> gApplications;
+
 // Main code
 int main(int, char**)
 {   
     HRESULT hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
+    std::cout << "[Audio] CoInitializeEx hr=0x" << std::hex << hr << std::dec << "\n";
     if (FAILED(hr)) {
         std::cerr << "CoInitializeEx failed\n";
         return -1;
@@ -91,6 +95,9 @@ int main(int, char**)
     // get audio devices after windows com is inited
     gAudioDevices = getOutputDevices();
     gMicDevices = getInputDevices();
+
+    // get applications and PIDs
+    gApplications = getApplicationIDs();
 
     if (get_setting<std::string>("first_run") == "true") {
         set_settings("save_folder", WStringToString(GetVideosFolder()));
@@ -188,6 +195,7 @@ int main(int, char**)
     // Main loop
     bool done = false;
     bool opened = true;
+
     while (!done)
     {
         // Poll and handle messages (inputs, window resize, etc.)
@@ -366,6 +374,13 @@ int main(int, char**)
 
         static int selectedHeadphonesIndex = getDefaultDeviceIndex(eRender, getOutputDevices());
         static int selectedMicrophoneIndex = getDefaultDeviceIndex(eCapture, getInputDevices());
+        static int selectedApplicationIndex = 0;
+        DWORD selectedPID;
+
+        std::map<std::string, std::vector<DWORD>> appMap;
+        for (auto& app : gApplications) {
+            appMap[app.name].push_back(app.pid);
+        }
 
         if (ImGui::BeginCombo("Select Headphones", selectedHeadphonesIndex >= 0 ? WStringToUTF8(gAudioDevices[selectedHeadphonesIndex].name).c_str() : "None")) {
             for (int i = 0; i < gAudioDevices.size(); i++) {
@@ -373,7 +388,7 @@ int main(int, char**)
                 std::string label = WStringToUTF8(gAudioDevices[i].name) + "##" + std::to_string(i);
                 if (ImGui::Selectable(label.c_str(), isSelected)) {
                     selectedHeadphonesIndex = i;
-                    std::wcout << L"Selected: " << gAudioDevices[i].name << "\n";
+                    std::wcout << "Selected: " << gAudioDevices[i].name << "\n";
                 }
                 if (isSelected)
                     ImGui::SetItemDefaultFocus();
@@ -387,10 +402,45 @@ int main(int, char**)
                 std::string label = WStringToUTF8(gMicDevices[i].name) + "##" + std::to_string(i);
                 if (ImGui::Selectable(label.c_str(), isSelected)) {
                     selectedMicrophoneIndex = i;
-                    std::wcout << L"Selected: " << gMicDevices[i].name << "\n";
+                    std::wcout << "Selected: " << gMicDevices[i].name << "\n";
                 }
                 if (isSelected)
                     ImGui::SetItemDefaultFocus();
+            }
+            ImGui::EndCombo();
+        }
+
+        std::string preview = "None";
+        if (!appMap.empty() && selectedApplicationIndex >= 0) {
+            int i = 0;
+            for (auto& [name, pids] : appMap) {
+                if (i == selectedApplicationIndex) {
+                    preview = name;
+                    if (pids.size() > 1)
+                        preview += " (" + std::to_string(pids.size()) + " instances)";
+                    break;
+                }
+                i++;
+            }
+        }
+
+        if (ImGui::BeginCombo("Select Application To Record", preview.c_str())) {
+            int index = 0;
+            for (auto& [name, pids] : appMap) {
+                std::string label = name;
+                if (pids.size() > 1)
+                    label += " (" + std::to_string(pids.size()) + " instances)";
+                bool isSelected = (selectedApplicationIndex == index);
+                if (ImGui::Selectable(label.c_str(), isSelected)) {
+                    selectedApplicationIndex = index;
+                    selectedPID = pids[0];
+                    std::cout << "Selected: " << name << "\n";
+                    std::cout << "selected pid = " << selectedPID << std::endl;
+                }
+                if (isSelected)
+                    ImGui::SetItemDefaultFocus();
+
+                index++;
             }
             ImGui::EndCombo();
         }
